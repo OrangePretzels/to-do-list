@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+}
+
+body {
+  overflow: hidden; /* disable scrolling on the page */
+  color: white;
+  background-color: black;
+}
+
+h1,
+.addItem {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mainContainer {
+  width: 85%; /* set a width for the element */
+  margin: 0 auto; /* center the element horizontally */
+  height: 85vh;
+  border: solid 1px white;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.addButton {
+  border: solid 1px white;
+  background-color: black;
+  width: 25%;
+  height: 5rem;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 5vw; /* vw lets text shrink with box so responsive */
+}
+
+.addButton:hover,
+.mainContainer:hover {
+  font-size: 3vw;
+  font-family: fantasy;
+  border: 3px solid;
+  border-image: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    )
+    1;
+
+  color: white;
+  font-family: cursive;
+  border-radius: 15px;
+}
+
+.newDivClass {
+  color: blueviolet;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: none; /* Hidden by default */
+  justify-content: center; /* Center modal horizontally */
+  align-items: center; /* Center modal vertically */
+}
+
+.modal {
+  border: 3px solid;
+  border-image: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    )
+    1;
+  padding: 15px;
+}
+
+.modalForm {
+  display: grid;
+}
+
+.modalSubmitButton {
+  font-family: cursive;
+  padding: 5px;
+  font-size: 25px;
+  background-color: black;
+  color: white;
+}
+.modalSubmitButton:hover {
+  animation: rainbow 1.5s infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  16.67% {
+    color: orange;
+  }
+  33.33% {
+    color: yellow;
+  }
+  50% {
+    color: green;
+  }
+  66.67% {
+    color: blue;
+  }
+  83.33% {
+    color: indigo;
+  }
+  100% {
+    color: violet;
+  }
+}
+
+.modalInputArea {
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: solid 1px white;
+}
+
+.closeButton {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: right;
+  padding: 5px;
+}
+
+.newDivClass {
+  color: orangered;
+}
+
+.newDiv {
+  font-size: 50px;
+  color: white;
+}
