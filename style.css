@@ -17,7 +17,7 @@ h1,
 }
 
 .mainContainer {
-  width: 85%; /* set a width for the element */
+  width: 50%; /* set a width for the element */
   margin: 0 auto; /* center the element horizontally */
   height: 85vh;
   border: solid 1px white;
@@ -28,19 +28,17 @@ h1,
 .addButton {
   border: solid 1px white;
   background-color: black;
-  width: 25%;
+  width: 15%;
   height: 5rem;
   margin: 10px;
   border-radius: 10px;
   color: white;
-  font-size: 5vw; /* vw lets text shrink with box so responsive */
+  font-size: 200%; /* vw lets text shrink with box so responsive */
+  font-family: "Pacifico", cursive;
 }
 
 .addButton:hover,
 .mainContainer:hover {
-  font-size: 3vw;
-  font-family: fantasy;
-  border: 3px solid;
   border-image: linear-gradient(
       to right,
       red,
@@ -52,10 +50,6 @@ h1,
       violet
     )
     1;
-
-  color: white;
-  font-family: cursive;
-  border-radius: 15px;
 }
 
 .newDivClass {
@@ -150,7 +144,22 @@ h1,
   color: orangered;
 }
 
-.newDiv {
-  font-size: 50px;
+.toDoTask {
+  color: purple;
+  font-size: 2rem;
+  font-family: "Pacifico", cursive;
+  margin: 5px;
+}
+
+.deleteButton {
+  float: right;
+  margin: 5px;
+  border: 5px;
+  background-color: black;
   color: white;
+  font-size: 1rem;
+}
+
+.deleteButton:hover {
+  animation: rainbow 1.5s infinite;
 }

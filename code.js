@@ -13,7 +13,7 @@ closeButton.addEventListener("click", () => {
   modalOverlay.style.display = "none"; // Hide the modal overlay
 });
 
-submitButton.addEventListener("click", function () {
+submitButton.addEventListener("click", function (e) {
   event.preventDefault(); // prevent the form from submitting
 
   const input = document.querySelector(".modalInputArea");
@@ -22,7 +22,26 @@ submitButton.addEventListener("click", function () {
   if (taskName) {
     // check if the input has a value
     const newDiv = document.createElement("div");
-    newDiv.textContent = taskName;
+    newDiv.classList.add("toDoTask");
+
+    // create task name
+    const taskNameSpan = document.createElement("span");
+    taskNameSpan.textContent = taskName;
+
+    // create delete button
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("deleteButton");
+    deleteButton.textContent = "X";
+
+    // add event listener to delete button
+    deleteButton.addEventListener("click", function () {
+      newDiv.remove();
+    });
+
+    // add task name and delete button to task container
+    newDiv.appendChild(taskNameSpan);
+    newDiv.appendChild(deleteButton);
+
     mainContainer.appendChild(newDiv);
 
     input.value = ""; // clear the input field
