@@ -23,7 +23,27 @@ h1,
   border: solid 1px white;
   box-sizing: border-box;
   border-radius: 5px;
+  overflow: auto; /* this will create a scrollbar when tasks start to fill up */
 }
+
+/* Customize the scrollbar */
+.mainContainer::-webkit-scrollbar {
+  width: 1px;
+}
+
+.mainContainer::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+.mainContainer::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 1px;
+}
+
+.mainContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+/* Customize the scrollbar */
 
 .addButton {
   border: solid 1px white;
